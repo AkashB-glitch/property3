@@ -1,0 +1,580 @@
+/* Admin Dashboard Styles */
+.admin-nav {
+    background: var(--neutral-800);
+}
+
+.admin-nav .nav-logo h2 {
+    color: white;
+}
+
+.admin-nav .nav-menu {
+    color: white;
+}
+
+.admin-nav .nav-link {
+    color: var(--neutral-300);
+}
+
+.admin-nav .nav-link:hover {
+    color: white;
+}
+
+.admin-welcome {
+    color: var(--neutral-300);
+    font-size: 14px;
+}
+
+.admin-layout {
+    display: flex;
+    min-height: calc(100vh - 72px);
+}
+
+/* Sidebar */
+.admin-sidebar {
+    width: 280px;
+    background: var(--neutral-900);
+    color: white;
+    flex-shrink: 0;
+}
+
+.sidebar-menu {
+    padding: 32px 0;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 16px 32px;
+    color: var(--neutral-300);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link:hover {
+    background: var(--neutral-800);
+    color: white;
+}
+
+.sidebar-link.active {
+    background: var(--neutral-800);
+    color: white;
+    border-left-color: var(--primary);
+}
+
+.sidebar-link span {
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+/* Main Content */
+.admin-content {
+    flex: 1;
+    background: var(--neutral-50);
+    overflow-y: auto;
+}
+
+.admin-section {
+    display: none;
+    padding: 40px;
+}
+
+.admin-section.active {
+    display: block;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.section-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--neutral-800);
+}
+
+.section-header p {
+    color: var(--neutral-600);
+    margin-top: 8px;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.stat-card {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-icon {
+    font-size: 48px;
+    width: 80px;
+    height: 80px;
+    background: var(--neutral-100);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-content h3 {
+    font-size: 16px;
+    color: var(--neutral-600);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--neutral-800);
+    margin-bottom: 4px;
+}
+
+.stat-change {
+    font-size: 14px;
+    color: var(--neutral-500);
+}
+
+.stat-change.positive {
+    color: var(--success);
+}
+
+/* Recent Activity */
+.recent-activity {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.recent-activity h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--neutral-800);
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: var(--neutral-50);
+    border-radius: 12px;
+}
+
+.activity-icon {
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.activity-content p {
+    margin-bottom: 4px;
+    color: var(--neutral-700);
+}
+
+.activity-time {
+    font-size: 12px;
+    color: var(--neutral-500);
+}
+
+/* Admin Controls */
+.admin-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    flex: 1;
+    max-width: 400px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--neutral-200);
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* Admin Table */
+.admin-table {
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.admin-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th {
+    background: var(--neutral-100);
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--neutral-700);
+    font-size: 14px;
+    border-bottom: 1px solid var(--neutral-200);
+}
+
+.admin-table td {
+    padding: 16px;
+    border-bottom: 1px solid var(--neutral-200);
+    color: var(--neutral-700);
+}
+
+.admin-table tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-table tr:hover {
+    background: var(--neutral-50);
+}
+
+/* Property Info */
+.property-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.property-info img {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* User Info */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Badges and Status */
+.badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge.rent {
+    background: var(--primary);
+    color: white;
+}
+
+.badge.sale {
+    background: var(--secondary);
+    color: white;
+}
+
+.status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status.active {
+    background: var(--success);
+    color: white;
+}
+
+.status.pending {
+    background: var(--warning);
+    color: white;
+}
+
+/* Action Buttons */
+.btn-action {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-action.edit {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-action.edit:hover {
+    background: var(--primary-dark);
+}
+
+.btn-action.delete {
+    background: var(--error);
+    color: white;
+}
+
+.btn-action.delete:hover {
+    background: #dc2626;
+}
+
+.btn-action.suspend {
+    background: var(--warning);
+    color: white;
+}
+
+.btn-action.suspend:hover {
+    background: #d97706;
+}
+
+/* Analytics */
+.analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+}
+
+.analytics-card {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.analytics-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--neutral-800);
+}
+
+.chart-placeholder {
+    height: 200px;
+    background: var(--neutral-50);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutral-500);
+    font-size: 14px;
+}
+
+/* Settings */
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 32px;
+}
+
+.settings-card {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.settings-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--neutral-800);
+}
+
+.setting-item {
+    margin-bottom: 20px;
+}
+
+.setting-item:last-child {
+    margin-bottom: 0;
+}
+
+.setting-item label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--neutral-700);
+    font-size: 14px;
+}
+
+.setting-item input[type="text"],
+.setting-item input[type="email"],
+.setting-item input[type="number"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--neutral-200);
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+}
+
+.setting-item input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .admin-layout {
+        flex-direction: column;
+    }
+
+    .admin-sidebar {
+        width: 100%;
+        order: 2;
+    }
+
+    .sidebar-menu {
+        display: flex;
+        overflow-x: auto;
+        padding: 16px 0;
+    }
+
+    .sidebar-link {
+        white-space: nowrap;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    .sidebar-link.active {
+        border-left: none;
+        border-bottom-color: var(--primary);
+    }
+
+    .admin-content {
+        order: 1;
+    }
+
+    .admin-section {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 24px;
+    }
+
+    .admin-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box {
+        max-width: none;
+    }
+
+    .admin-table {
+        overflow-x: auto;
+    }
+
+    .analytics-grid,
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .property-info,
+    .user-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .admin-section {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stat-icon {
+        margin-bottom: 16px;
+    }
+
+    .activity-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .settings-card,
+    .analytics-card {
+        padding: 20px;
+    }
+}

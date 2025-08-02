@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listings - PropertyHub</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>PropertyHub</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="listings.html" class="nav-link active">Properties</a>
+                <a href="login.html" class="nav-link">Login</a>
+                <a href="signup.html" class="nav-link signup-btn">Sign Up</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="listings-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Property Listings</h1>
+                <p>Find your perfect property from our extensive collection</p>
+            </div>
+
+            <!-- Filters and Controls -->
+            <div class="listings-controls">
+                <div class="filters">
+                    <select id="property-type" class="filter-select">
+                        <option value="all">All Types</option>
+                        <option value="rent">For Rent</option>
+                        <option value="sale">For Sale</option>
+                    </select>
+                    <select id="price-range" class="filter-select">
+                        <option value="all">All Prices</option>
+                        <option value="0-2000">$0 - $2,000</option>
+                        <option value="2000-4000">$2,000 - $4,000</option>
+                        <option value="4000+">$4,000+</option>
+                    </select>
+                    <select id="bedrooms" class="filter-select">
+                        <option value="all">Any Bedrooms</option>
+                        <option value="1">1 Bedroom</option>
+                        <option value="2">2 Bedrooms</option>
+                        <option value="3">3 Bedrooms</option>
+                        <option value="4+">4+ Bedrooms</option>
+                    </select>
+                </div>
+                <div class="view-controls">
+                    <button id="grid-view" class="view-btn active">
+                        <span>⊞</span> Grid
+                    </button>
+                    <button id="list-view" class="view-btn">
+                        <span>☰</span> List
+                    </button>
+                </div>
+            </div>
+
+            <!-- Properties Grid -->
+            <div class="properties-container grid-view" id="properties-container">
+                <div class="property-card" data-type="rent" data-price="2500" data-bedrooms="2">
+                    <div class="property-image">
+                        <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Modern Apartment">
+                        <div class="property-type">For Rent</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>Modern Downtown Apartment</h3>
+                        <p class="property-location">📍 Downtown, City Center</p>
+                        <div class="property-details">
+                            <span>2 🛏️</span>
+                            <span>2 🚿</span>
+                            <span>1,200 sq ft</span>
+                        </div>
+                        <div class="property-price">$2,500/month</div>
+                        <button class="btn btn-primary btn-small">View Details</button>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="sale" data-price="450000" data-bedrooms="4">
+                    <div class="property-image">
+                        <img src="https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Family House">
+                        <div class="property-type sale">For Sale</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>Beautiful Family House</h3>
+                        <p class="property-location">📍 Suburban Area</p>
+                        <div class="property-details">
+                            <span>4 🛏️</span>
+                            <span>3 🚿</span>
+                            <span>2,800 sq ft</span>
+                        </div>
+                        <div class="property-price">$450,000</div>
+                        <button class="btn btn-primary btn-small">View Details</button>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="rent" data-price="3200" data-bedrooms="3">
+                    <div class="property-image">
+                        <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Luxury Condo">
+                        <div class="property-type">For Rent</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>Luxury Waterfront Condo</h3>
+                        <p class="property-location">📍 Marina District</p>
+                        <div class="property-details">
+                            <span>3 🛏️</span>
+                            <span>2 🚿</span>
+                            <span>1,800 sq ft</span>
+                        </div>
+                        <div class="property-price">$3,200/month</div>
+                        <button class="btn btn-primary btn-small">View Details</button>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="rent" data-price="1800" data-bedrooms="1">
+                    <div class="property-image">
+                        <img src="https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Studio Apartment">
+                        <div class="property-type">For Rent</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>Cozy Studio Apartment</h3>
+                        <p class="property-location">📍 Arts District</p>
+                        <div class="property-details">
+                            <span>1 🛏️</span>
+                            <span>1 🚿</span>
+                            <span>800 sq ft</span>
+                        </div>
+                        <div class="property-price">$1,800/month</div>
+                        <button class="btn btn-primary btn-small">View Details</button>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="sale" data-price="320000" data-bedrooms="3">
+                    <div class="property-image">
+                        <img src="https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Townhouse">
+                        <div class="property-type sale">For Sale</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>Modern Townhouse</h3>
+                        <p class="property-location">📍 Residential Area</p>
+                        <div class="property-details">
+                            <span>3 🛏️</span>
+                            <span>2 🚿</span>
+                            <span>1,600 sq ft</span>
+                        </div>
+                        <div class="property-price">$320,000</div>
+                        <button class="btn btn-primary btn-small">View Details</button>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="rent" data-price="2800" data-bedrooms="2">
+                    <div class="property-image">
+                        <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Penthouse">
+                        <div class="property-type">For Rent</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>Stunning Penthouse</h3>
+                        <p class="property-location">📍 High-rise District</p>
+                        <div class="property-details">
+                            <span>2 🛏️</span>
+                            <span>2 🚿</span>
+                            <span>1,400 sq ft</span>
+                        </div>
+                        <div class="property-price">$2,800/month</div>
+                        <button class="btn btn-primary btn-small">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PropertyHub</h3>
+                    <p>Your trusted partner in finding the perfect property</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="listings.html">Properties</a>
+                    <a href="login.html">Login</a>
+                    <a href="signup.html">Sign Up</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 info@propertyhub.com</p>
+                    <p>📞 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PropertyHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
