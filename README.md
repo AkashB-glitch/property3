@@ -44,3 +44,9 @@ Admin: Can control property posts, manage users (UI only).
 ├── public/
 ├── dist/
 
+🛠️ Technologies Used
+HTML5, CSS3 (Media Queries for Responsiveness)
+
+Vanilla JavaScript (Mock login & UI interactions)
+
+SVG, Images, and Minimal JS animations
